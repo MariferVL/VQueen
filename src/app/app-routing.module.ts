@@ -29,10 +29,15 @@ const routes: Routes = [
     path: 'admin',
     component: ManagerComponent,
     children: [
-      { path: 'employees', component: EmployeesAdminComponent },
-      { path: 'menu', component: MenuAdminComponent },
-      { path: 'edit-menu/:id', component: EditMenuComponent },
-      { path: 'edit-employee/:id', component: EditEmployeeComponent },
+      { path: 'employees', component: EmployeesAdminComponent, 
+      children: [
+        { path: 'edit/:id', component: EditEmployeeComponent },
+      ], },
+      { path: 'menu', component: MenuAdminComponent,
+      children: [
+        { path: 'edit/:id', component: EditMenuComponent },
+      ], },
+   
     ],
   },
   // Add a wildcard route to handle unknown URLs
