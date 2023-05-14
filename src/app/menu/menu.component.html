@@ -1,1 +1,11 @@
-<p>menu works!</p>
+<section  class="content-box">
+    <h2>Our Menu</h2>
+    <ul *ngFor="let menu of menus">
+      <li id="{{menu.id}}">
+        <h4>{{menu.name}}</h4>
+        <span>${{menu.price}}</span>
+        <a routerLink="/menu/{{menu.id}}">Zoom It</a>
+      </li>
+    </ul>
+  </section>
+  
