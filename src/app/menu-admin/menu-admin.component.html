@@ -1,0 +1,18 @@
+<h2>Menu Management</h2>
+
+<div class="content-box" *ngFor="let menu of menus">
+  <h3>{{ menu.name }}</h3>
+  <p>{{ menu.description }}</p>
+  <ul>
+    <li *ngFor="let ingredient of menu.ingredients">{{ ingredient }}</li>
+  </ul>
+  <p>Allergens: {{ menu.allergens.join(', ') }}</p>
+  <p>Price: ${{ menu.price }}</p>
+  <div class="buttons-container">
+
+        <a routerLink="/edit-menu/{{menu.id}}">Edit</a>
+
+        <button (click)="onDeleteClicked(menu.id)" >Delete</button>
+  </div>
+  
+</div>
