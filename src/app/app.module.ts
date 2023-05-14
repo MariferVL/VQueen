@@ -10,7 +10,6 @@ import { KitchenComponent } from './kitchen/kitchen.component';
 import { ReadyComponent } from './ready/ready.component';
 import { LocationsComponent } from './locations/locations.component';
 import { ContactComponent } from './contact/contact.component';
-import { ModalContentComponent } from './modal-content/modal-content.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { ModalContentComponent } from './modal-content/modal-content.component';
     ReadyComponent,
     LocationsComponent,
     ContactComponent,
-    ModalContentComponent
   ],
   imports: [
     BrowserModule,
