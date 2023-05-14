@@ -7,6 +7,7 @@ import { DetailedOrderComponent } from './detailed-order/detailed-order.componen
 import { KitchenComponent } from './kitchen/kitchen.component';
 import { ReadyComponent } from './ready/ready.component';
 import { LocationsComponent } from './locations/locations.component';
+import { OrderReceivedComponent } from './order-received/order-received.component';
 
 const routes: Routes = [
   { path: '', redirectTo:'/home', pathMatch: 'full'},
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'menu', component: MenuComponent},
   { path: 'menu/:id', component: DetailedMenuComponent},
   { path: 'order', component: DetailedOrderComponent},
+  { path: 'order-received', component: OrderReceivedComponent},
   { path: 'kitchen', component: KitchenComponent},
   { path: 'ready', component: ReadyComponent},
   { path: 'locations', component: LocationsComponent}
