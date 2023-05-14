@@ -1,20 +1,20 @@
 <header>
     <h1>Order Details</h1>
 </header>
-<main *ngIf="currentUserData.length > 0">
-    <section *ngFor="let data of currentUserData">
+<main>
+    <section>
         <h2>Order Information</h2>
         <div>
             <label for="order-id">Order ID:</label>
-            <span id="order-id">{{ data.orderNumber }}</span>
+            <span id="order-id">{{orderNum}}</span>
         </div>
         <div>
             <label for="order-date">Order Date:</label>
-            <span id="order-date">{{ data.timestamp }}</span>
+            <span id="order-date">{{ orderDate | date }}</span>
         </div>
         <div>
             <label for="customer-name">Customer Name:</label>
-            <span id="customer-name">{{ data.customerName }}</span>
+            <span id="customer-name">{{ customerName }}</span>
         </div>
         <!-- Additional order details can be added here -->
     </section>
@@ -50,9 +50,7 @@
         </table>
     </section>
 
-    <a routerLink="/menu">Back Menu</a>
-
     <button (click)="confirmOrder()">Send Order</button>
 
-
+    <a routerLink="/menu">Back Menu</a>
 </main>

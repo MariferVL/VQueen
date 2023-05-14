@@ -15,8 +15,12 @@ export class UsernameModalComponent {
   ) {}
 
 
-  submitForm(): void {
+  submitCustomerName(): void {
     console.log('Submitted Customer Name:', this.customerName);
+    this.dialogRef.close(this.customerName);
+  }
+
+  close(): void {
     this.dialogRef.close();
   }
 
