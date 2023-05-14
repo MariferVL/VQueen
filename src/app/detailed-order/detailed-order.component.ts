@@ -67,13 +67,15 @@ export class DetailedOrderComponent implements OnInit {
       width: '1100px'
     });
   
-    confirmRef.afterClosed().subscribe(() => {      
+    confirmRef.afterClosed().subscribe(result => {    
+      if (result === 'confirm'){  
       this.orderNum = this.generateOrderNumber();
       this.orderDate = new Date();
       this.message = `Order ${this.orderNum} from ${this.customerName}`;
       console.log('msg: ',this.message);
       
       this.router.navigateByUrl('/order-received');
+      }
     });
   }
   

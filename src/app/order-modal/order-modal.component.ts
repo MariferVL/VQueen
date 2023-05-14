@@ -14,6 +14,11 @@ export class OrderModalComponent {
   submitOrder(): void {
     console.log('Order Submitted to Kitchen👩🏻‍🍳👨🏻‍🍳');
     // Close the modal
+    const result = 'confirm';
+    this.confirmRef.close(result);
+  }
+
+  close():void {
     this.confirmRef.close();
   }
 
