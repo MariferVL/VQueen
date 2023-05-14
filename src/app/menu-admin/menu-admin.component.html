@@ -1,5 +1,4 @@
 <h2>Menu Management</h2>
-
 <div class="content-box" *ngFor="let menu of menus">
   <h3>{{ menu.name }}</h3>
   <p>{{ menu.description }}</p>
@@ -9,10 +8,11 @@
   <p>Allergens: {{ menu.allergens.join(', ') }}</p>
   <p>Price: ${{ menu.price }}</p>
   <div class="buttons-container">
+    <a routerLink="/admin/menu/edit/{{menu.id}}">Edit</a>
 
-        <a routerLink="/edit-menu/{{menu.id}}">Edit</a>
-
-        <button (click)="onDeleteClicked(menu.id)" >Delete</button>
+    <button (click)="onDeleteClicked(menu.id)">Delete</button>
   </div>
-  
+
 </div>
+
+<router-outlet></router-outlet>
