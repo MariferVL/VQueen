@@ -16,6 +16,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { UsernameModalComponent } from './username-modal/username-modal.component';
 import { OrderModalComponent } from './order-modal/order-modal.component';
 import { OrderReceivedComponent } from './order-received/order-received.component';
+import { ManagerComponent } from './manager/manager.component';
+import { MenuAdminComponent } from './menu-admin/menu-admin.component';
+import { EmployeesAdminComponent } from './employees-admin/employees-admin.component';
+import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
+import { EditMenuComponent } from './edit-menu/edit-menu.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -32,6 +38,12 @@ import { OrderReceivedComponent } from './order-received/order-received.componen
     UsernameModalComponent,
     OrderModalComponent,
     OrderReceivedComponent,
+    EditMenuComponent,
+    ManagerComponent,
+    MenuAdminComponent,
+    EmployeesAdminComponent,
+    EditEmployeeComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
