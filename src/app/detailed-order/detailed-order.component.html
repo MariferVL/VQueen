@@ -1,1 +1,59 @@
-<p>detailed-order works!</p>
+<header>
+    <h1>Order Details</h1>
+</header>
+<main>
+    <ng-template #modalTemplate let-modal>
+        <div class="modal-content">
+          <app-modal-content [customerName]="customerName"></app-modal-content>
+        </div>
+      </ng-template>
+    <section>
+        <h2>Order Information</h2>
+        <div>
+            <label for="order-id">Order ID:</label>
+            <span id="order-id">12345</span>
+        </div>
+        <div>
+            <label for="order-date">Order Date:</label>
+            <span id="order-date">2023-05-13</span>
+        </div>
+        <div>
+            <label for="customer-name">Customer Name:</label>
+            <span id="customer-name">John Doe</span>
+        </div>
+        <!-- Additional order details can be added here -->
+    </section>
+    <section>
+        <h2>Order Items</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Product A</td>
+                    <td>2</td>
+                    <td>$10.00</td>
+                </tr>
+                <tr>
+                    <td>Product B</td>
+                    <td>1</td>
+                    <td>$5.99</td>
+                </tr>
+                <!-- Additional order items can be added here -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total:</td>
+                    <td>$25.99</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <a routerLink="/menu">Back Menu</a>
+</main>
