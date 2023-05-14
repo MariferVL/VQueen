@@ -12,8 +12,8 @@ const routes: Routes = [
   { path: '', redirectTo:'/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent, pathMatch:'full' },
   { path: 'menu', component: MenuComponent},
-  { path: 'detailed-menu', component: DetailedMenuComponent},
-  { path: 'detailed-order', component: DetailedOrderComponent},
+  { path: 'menu/:id', component: DetailedMenuComponent},
+  { path: 'order', component: DetailedOrderComponent},
   { path: 'kitchen', component: KitchenComponent},
   { path: 'ready', component: ReadyComponent},
   { path: 'locations', component: LocationsComponent}
