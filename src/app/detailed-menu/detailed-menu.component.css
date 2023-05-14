@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+  
+  .heading::before,
+  .heading::after {
+    content: "";
+    display: block;
+  }
+  
+  .heading::before {
+    margin-bottom: 1rem;
+  }
+  
+  .heading::after {
+    margin-top: 1rem;
+  }
