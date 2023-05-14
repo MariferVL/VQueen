@@ -25,3 +25,7 @@ body {
   .heading::after {
     margin-top: 1rem;
   }
+
+  .foodImg {
+    width: 33%;
+  }

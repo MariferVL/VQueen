@@ -3,14 +3,14 @@
 <article *ngIf="menu">
     <h3>{{menu.name}}</h3>
     <figure>
-      <img src="burger.jpg" alt="{{menu.name}}">
-      <figcaption>Our mouthwatering {{menu.name}}</figcaption>
+      <img [src]="foodImg" alt="{{menu.name}}" class="foodImg">
+      <figcaption>{{menu.name}}</figcaption>
     </figure>
-    <p class="description">A juicy beef patty topped with melted cheese, crispy bacon, fresh lettuce, and our secret sauce. Served with a side of golden fries.</p>
+    <p class="description">{{menu.description}}</p>
     <div class="details">
       <p><strong>Price:</strong> ${{menu.price}}</p>
-      <p><strong>Ingredients:</strong> Beef patty, cheese, bacon, lettuce, secret sauce</p>
-      <p><strong>Allergens:</strong> Contains dairy, gluten</p>
+      <p><strong>Ingredients:</strong>{{menu.ingredients}} </p>
+      <p><strong>Allergens:</strong> {{menu.allergens}}</p>
     </div>
     <a routerLink="/order">Want It</a>
     <a routerLink="/menu">Back</a>

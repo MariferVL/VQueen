@@ -10,7 +10,7 @@ import { fakeMenu } from '../fake-data';
 })
 export class DetailedMenuComponent implements OnInit {
   menu: Menu | undefined; // Declare menu as a single Menu object, not an array
-
+  foodImg: string = 'assets/Images/8.png'; 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
