@@ -37,7 +37,6 @@ const routes: Routes = [
       children: [
         { path: 'edit/:id', component: EditMenuComponent },
       ], },
-   
     ],
   },
   // Add a wildcard route to handle unknown URLs

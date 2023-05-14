@@ -1,4 +1,6 @@
 <h2>Menu Management</h2>
+
+<router-outlet></router-outlet>
 <div class="content-box" *ngFor="let menu of menus">
   <h3>{{ menu.name }}</h3>
   <p>{{ menu.description }}</p>
@@ -15,4 +17,3 @@
 
 </div>
 
-<router-outlet></router-outlet>
