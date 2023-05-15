@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Menu } from '../types';
 import { fakeMenu } from '../fake-data';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -16,9 +17,11 @@ export class ContactComponent {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private titleService: Title,
   ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('VQ - Add Product');
     const id = this.route.snapshot.paramMap.get('id');
     this.menu = fakeMenu.find(menu => menu.id === id);
     this.message = `Hi, I want to order all the included in ${this.menu?.id.toLowerCase}`;

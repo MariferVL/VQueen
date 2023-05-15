@@ -9,7 +9,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class OrderModalComponent {
   constructor(
     public confirmRef: MatDialogRef<OrderModalComponent>,
-    ) {}
+  ) { }
 
   submitOrder(): void {
     console.log('Order Submitted to Kitchen👩🏻‍🍳👨🏻‍🍳');
@@ -18,7 +18,7 @@ export class OrderModalComponent {
     this.confirmRef.close(result);
   }
 
-  close():void {
+  close(): void {
     this.confirmRef.close();
   }
 

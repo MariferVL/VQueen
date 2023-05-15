@@ -1,5 +1,7 @@
 <h2>Menu Management</h2>
-
+<a routerLink="/admin/menu/add-product">
+  <button>Add New Product</button>
+</a>
 <router-outlet></router-outlet>
 <div class="content-box" *ngFor="let menu of menus">
   <h3>{{ menu.name }}</h3>

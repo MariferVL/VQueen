@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-edit-employee',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./edit-employee.component.css']
 })
 export class EditEmployeeComponent {
+  constructor(
+    private titleService: Title
+    ) {}
+
+  ngOnInit() {
+    this.titleService.setTitle('VQAdmin - Edit Employee Data');
+  }
+  
 
 }

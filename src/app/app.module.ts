@@ -22,6 +22,7 @@ import { EmployeesAdminComponent } from './employees-admin/employees-admin.compo
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { EditMenuComponent } from './edit-menu/edit-menu.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     EmployeesAdminComponent,
     EditEmployeeComponent,
     NotFoundComponent,
+    AddProductComponent,
   ],
   imports: [
     BrowserModule,

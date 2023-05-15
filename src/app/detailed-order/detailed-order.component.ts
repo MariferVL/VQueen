@@ -5,6 +5,7 @@ import { fakeMenu } from '../fake-data';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { UsernameModalComponent } from '../username-modal/username-modal.component';
 import { OrderModalComponent } from '../order-modal/order-modal.component';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -26,9 +27,11 @@ export class DetailedOrderComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     public dialog: MatDialog,
+    private titleService: Title,
   ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('VQ - Add Product');
     const id = this.route.snapshot.paramMap.get('id');
     this.menu = fakeMenu.find(menu => menu.id === id);    
     this.checkCustomerName();

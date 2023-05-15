@@ -14,6 +14,7 @@ import { EmployeesAdminComponent } from './employees-admin/employees-admin.compo
 import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -36,6 +37,7 @@ const routes: Routes = [
       { path: 'menu', component: MenuAdminComponent,
       children: [
         { path: 'edit/:id', component: EditMenuComponent },
+        { path: 'add-product', component: AddProductComponent },
       ], },
     ],
   },

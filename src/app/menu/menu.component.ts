@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Menu } from '../types';
 import { fakeMenu } from '../fake-data';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-menu',
@@ -11,9 +12,12 @@ import { fakeMenu } from '../fake-data';
 export class MenuComponent implements OnInit {
   menus: Menu[] = [];
 
-  constructor() { }
+  constructor(
+    private titleService: Title
+    ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.titleService.setTitle('VQ - Menu');
     this.menus = fakeMenu;
   }
 

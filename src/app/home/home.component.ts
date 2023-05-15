@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   logoImg: string = 'assets/Images/logoVQ.png'; 
+  
+  constructor(
+    private titleService: Title
+    ) {}
+
+  ngOnInit() {
+    this.titleService.setTitle('VQ - Home');
+  }
 }

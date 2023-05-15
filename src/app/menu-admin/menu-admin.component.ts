@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { fakeMenu } from '../fake-data';
 import { Menu } from '../types';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-menu-admin',
@@ -10,9 +11,12 @@ import { Menu } from '../types';
 export class MenuAdminComponent {
   menus: Menu [] = [];
 
-  constructor() { }
+  constructor(
+    private titleService: Title
+    ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.titleService.setTitle('VQAdmin - Menu Data');
     this.menus = fakeMenu;
   }
 
