@@ -24,6 +24,7 @@ import { EditMenuComponent } from './edit-menu/edit-menu.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { MenuFormComponent } from './menu-form/menu-form.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { MenuFormComponent } from './menu-form/menu-form.component';
     NotFoundComponent,
     AddProductComponent,
     MenuFormComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
