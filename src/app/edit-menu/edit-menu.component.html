@@ -1,7 +1,13 @@
 <section class="content-box">
-    <h2>Add New Product</h2>
+    <h2>Edit Products</h2>
     <app-menu-form 
     buttonText="Save Changes"
+    [currentName]="menu.name"
+    [currentDescription]="menu.description"
+    [currentIngredientsStr]="menu.ingredients.join(', ')"
+    [currentAllergensStr]="menu.allergens.join(', ')"
+    [currentPrice]="menu.price"
+
     (onSubmit)="onSubmit()"
     ></app-menu-form>
 </section>
