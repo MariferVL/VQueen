@@ -25,7 +25,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { MenuFormComponent } from './menu-form/menu-form.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-
+import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -50,13 +51,15 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     AddProductComponent,
     MenuFormComponent,
     NavBarComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

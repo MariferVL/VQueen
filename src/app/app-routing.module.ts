@@ -15,17 +15,19 @@ import { MenuAdminComponent } from './menu-admin/menu-admin.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, pathMatch: 'full' },
+  { path: 'kitchen', component: KitchenComponent },
+  { path: 'locations', component: LocationsComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'menu/:id', component: DetailedMenuComponent },
   { path: 'order', component: DetailedOrderComponent },
   { path: 'order-received', component: OrderReceivedComponent },
-  { path: 'kitchen', component: KitchenComponent },
   { path: 'ready', component: ReadyComponent },
-  { path: 'locations', component: LocationsComponent },
   {
     path: 'admin',
     component: ManagerComponent,
