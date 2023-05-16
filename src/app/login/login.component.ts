@@ -19,8 +19,16 @@ export class LoginComponent implements OnDestroy {
 
   submitForm(): void {
     console.log(this.email + ' ' +  this.password);
-    this.accessToken =  this.authService.login(this.email, this.password);
-    console.log('this.accessToken:', this.accessToken);
+    this.authService.login(this.email, this.password)
+    .subscribe({
+      next: (response: any) => {
+        this.accessToken = response;
+        console.log('In next this.accessToken:', this.accessToken);
+      },
+      error: (error: any) => {
+        console.error(error);
+      }
+    });
     
   }
 
