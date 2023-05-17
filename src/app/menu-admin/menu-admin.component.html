@@ -10,7 +10,7 @@
     <li *ngFor="let ingredient of menu.ingredients">{{ ingredient }}</li>
   </ul>
   <p>Allergens: {{ menu.allergens.join(', ') }}</p>
-  <p>Price: ${{ menu.price }}</p>
+  <p>Price: £{{ menu.price }}</p>
   <div class="buttons-container">
     <a routerLink="/admin/menu/edit/{{menu.id}}">Edit</a>
 
