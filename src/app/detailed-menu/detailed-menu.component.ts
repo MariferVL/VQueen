@@ -11,7 +11,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class DetailedMenuComponent implements OnInit {
   menu: Menu | undefined; // Declare menu as a single Menu object, not an array
-  foodImg: string = 'assets/Images/8.png'; 
+  foodImg: string = 'assets/Images/sopaipilla.png'; 
 
   constructor(
     private route: ActivatedRoute,

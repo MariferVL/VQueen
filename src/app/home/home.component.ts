@@ -7,7 +7,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  logoImg: string = 'assets/Images/logoVQ.png'; 
+  logoImg: string = 'assets/Images/vqlogo1.png'; 
   
   constructor(
     private titleService: Title
