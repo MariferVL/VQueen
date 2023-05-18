@@ -7,13 +7,15 @@ export const fakeMenu: Menu[] = [{
     ingredients: ["sopaipillas", "pebre salsa (tomatoes, onions, cilantro, garlic, spices)"],
     allergens: ["gluten (from sopaipillas)"],
     price: 7,
+    sold: 0,
 }, {
     id: '345',
     name: `Vegan Queen's Royale Completo`,
-    description: `Indulging in a Vegan Completo is a delight fit for royalty. This plant-based rendition of the classic Completo is a true culinary masterpiece. With a foundation of a soft, warm bun, it embraces a medley of delightful ingredients. Creamy avocado spread, savory plant-based sausage, tangy mayonnaise or vegannaise, juicy tomato slices, zesty ketchup, and a delightful crunch of sauerkraut come together in perfect harmony. Each bite offers a symphony of flavors that will leave you feeling satisfied and amazed. Experience the regal pleasure of a Vegan Completo, where compassion meets culinary excellence.`,
+    description: `Experience the regal pleasure of a Vegan Completo, a culinary masterpiece where compassion meets excellence. This plant-based delight features a soft bun, savory plant-based sausage, creamy avocado spread, tangy mayo, juicy tomato slices, zesty ketchup, and a delightful sauerkraut crunch. Indulge in the symphony of flavors, fit for royalty.`,
     ingredients: ["avocado", "vegan sausage", "mayonnaise or vegannaise", "tomato", "ketchup", "sauerkraut"],
     allergens: ["soy (tofu or tempeh)"],
     price: 8,
+    sold: 0,
 },{
     id: '456',
     name: 'Our mouthwatering Chacarero',
@@ -21,5 +23,6 @@ export const fakeMenu: Menu[] = [{
     ingredients: ["grilled vegetables", "seasoned tofu or tempeh", "greens", "vegan mayo", "homemade salsa"],
     allergens: ["soy (if using tofu or tempeh)"],
     price: 11,
+    sold: 0,
 }];
 

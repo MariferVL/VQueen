@@ -5,4 +5,5 @@ export interface Menu {
     ingredients: string[],
     allergens: string[],
     price: number,
+    sold: number,
 }
