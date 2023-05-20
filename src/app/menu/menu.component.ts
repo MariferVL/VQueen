@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Menu } from '../types';
-import { fakeMenu } from '../fake-data';
 import { Title } from '@angular/platform-browser';
+import { AdminService } from '../admin.service';
 
 @Component({
   selector: 'app-menu',
@@ -13,12 +13,14 @@ export class MenuComponent implements OnInit {
   menus: Menu[] = [];
 
   constructor(
-    private titleService: Title
+    private titleService: Title,
+    private AdminService: AdminService,
     ) {}
 
   ngOnInit() {
     this.titleService.setTitle('VQ - Menu');
-    this.menus = fakeMenu;
+    this.AdminService.getMenus()
+    .subscribe(menus => this.menus = menus);
   }
 }
 // import { Component, OnInit } from '@angular/core';
