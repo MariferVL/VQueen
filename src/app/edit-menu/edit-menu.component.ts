@@ -16,7 +16,8 @@ export class EditMenuComponent {
     description: '',
     ingredients: [],
     allergens: [],
-    price: 0
+    price: 0,
+    sales: 0
   };
   
   constructor(
