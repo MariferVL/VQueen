@@ -40,7 +40,7 @@ export class MenuFormComponent implements OnInit {
 
   onClick(): void {
     this.onSubmit.emit({
-      id: this.generateUniqueId(),
+      idmenu: this.generateUniqueId(),
       name: this.name,
       description: this.description,
       ingredients: this.ingredientsString.split(','),

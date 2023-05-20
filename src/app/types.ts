@@ -1,5 +1,5 @@
 export interface Menu { 
-    id: string,
+    idmenu: string,
     name: string,
     description: string,
     ingredients: string[],

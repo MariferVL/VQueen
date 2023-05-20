@@ -23,8 +23,8 @@ export class ContactComponent {
   ngOnInit(): void {
     this.titleService.setTitle('VQ - Add Product');
     const id = this.route.snapshot.paramMap.get('id');
-    this.menu = fakeMenu.find(menu => menu.id === id);
-    this.message = `Hi, I want to order all the included in ${this.menu?.id.toLowerCase}`;
+    this.menu = fakeMenu.find(menu => menu.idmenu === id);
+    this.message = `Hi, I want to order all the included in ${this.menu?.idmenu.toLowerCase}`;
   }
 
   sendMessage(): void {

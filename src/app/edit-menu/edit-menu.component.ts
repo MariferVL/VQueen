@@ -11,7 +11,7 @@ import { fakeMenu } from '../fake-data';
 })
 export class EditMenuComponent {
   menu: Menu = {
-    id: '',
+    idmenu: '',
     name: '',
     description: '',
     ingredients: [],
@@ -29,7 +29,7 @@ export class EditMenuComponent {
   ngOnInit() {
     this.titleService.setTitle('VQAdmin - Edit Menu');
     const id = this.route.snapshot.paramMap.get('id');
-    this.menu = fakeMenu.find(menu => menu.id === id) as Menu;
+    this.menu = fakeMenu.find(menu => menu.idmenu === id) as Menu;
     }
 
   onSubmit(): void {
