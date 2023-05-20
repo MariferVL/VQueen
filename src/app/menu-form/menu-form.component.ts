@@ -46,6 +46,7 @@ export class MenuFormComponent implements OnInit {
       ingredients: this.ingredientsString.split(','),
       allergens: this.allergensString.split(','),
       price: Number(this.price),
+      sales: 0,
     });
   }
 
