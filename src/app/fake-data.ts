@@ -7,7 +7,7 @@ export const fakeMenu: Menu[] = [{
     ingredients: ["sopaipillas", "pebre salsa (tomatoes, onions, cilantro, garlic, spices)"],
     allergens: ["gluten (from sopaipillas)"],
     price: 7,
-    sold: 0,
+    sales: 0,
 }, {
     id: '345',
     name: `Vegan Queen's Royale Completo`,
@@ -15,7 +15,7 @@ export const fakeMenu: Menu[] = [{
     ingredients: ["avocado", "vegan sausage", "mayonnaise or vegannaise", "tomato", "ketchup", "sauerkraut"],
     allergens: ["soy (tofu or tempeh)"],
     price: 8,
-    sold: 0,
+    sales: 0,
 },{
     id: '456',
     name: 'Our mouthwatering Chacarero',
@@ -23,6 +23,6 @@ export const fakeMenu: Menu[] = [{
     ingredients: ["grilled vegetables", "seasoned tofu or tempeh", "greens", "vegan mayo", "homemade salsa"],
     allergens: ["soy (if using tofu or tempeh)"],
     price: 11,
-    sold: 0,
+    sales: 0,
 }];
 
