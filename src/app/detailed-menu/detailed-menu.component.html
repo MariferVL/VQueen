@@ -1,7 +1,8 @@
 <h1 class="heading">Zoom the Menu, Taste the Dream:<br>Flavor's Just a Click away,<br>it'll Make You Scream!</h1>
 
-<article *ngIf="menu">
+<article *ngIf="menu"  >
     <h3>{{menu.name}}</h3>
+    <p>This royal menu has been chosen {{menu.sales}} times</p>
     <figure>
       <img [src]="foodImg" alt="{{menu.name}}" class="foodImg">
       <figcaption>Image:{{menu.name}}</figcaption>
@@ -12,7 +13,14 @@
       <p><strong>Ingredients:</strong>{{menu.ingredients}} </p>
       <p><strong>Allergens:</strong> {{menu.allergens}}</p>
     </div>
-    <a routerLink="/order">Want It</a>
-    <a routerLink="/menu">Back</a>
+    <footer>
+      <a routerLink="/order">Want It</a>
+       <a routerLink="/menu">Back</a>
+    </footer>
   </article>
+
+  <figure *ngIf="isLoading">
+    <img src="" alt="Loading">
+    <figcaption>Loading...</figcaption>
+  </figure>
   
