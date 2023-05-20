@@ -12,9 +12,9 @@
   <p>Allergens: {{ menu.allergens.join(', ') }}</p>
   <p>Price: £{{ menu.price }}</p>
   <div class="buttons-container">
-    <a routerLink="/admin/menu/edit/{{menu.id}}">Edit</a>
+    <a routerLink="/admin/menu/edit/{{menu.idmenu}}">Edit</a>
 
-    <button (click)="onDeleteClicked(menu.id)">Delete</button>
+    <button (click)="onDeleteClicked(menu.idmenu)">Delete</button>
   </div>
 
 </div>
