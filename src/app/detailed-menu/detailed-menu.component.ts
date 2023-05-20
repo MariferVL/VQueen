@@ -23,12 +23,9 @@ export class DetailedMenuComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('VQ - Add Product');
     const id = this.route.snapshot.paramMap.get('id') as string;
-    console.log("id: ",id);
     
     this.adminService.getMenusById(id)
     .subscribe(menu => {
-      console.log("suscrib1 id: ",id);
-
       this.menu = menu;
       this.isLoading = false;
     });

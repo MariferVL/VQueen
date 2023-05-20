@@ -33,7 +33,7 @@ export class DetailedOrderComponent implements OnInit {
   ngOnInit(): void {
     this.titleService.setTitle('VQ - Add Product');
     const id = this.route.snapshot.paramMap.get('id');
-    this.menu = fakeMenu.find(menu => menu.id === id);    
+    this.menu = fakeMenu.find(menu => menu.idmenu === id);    
     this.checkCustomerName();
   }
 
