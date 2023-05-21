@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import { AdminService } from '../admin.service';
 
 @Component({
   selector: 'app-add-product',
@@ -11,17 +12,24 @@ export class AddProductComponent {
  
   constructor(
     private router: Router,
-    private titleService: Title
+    private titleService: Title,
+    private adminService: AdminService,
   ) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('VQAdmin - Add Product');
   }
 
-  onSubmit(): void {
-    console.log('Creating a new delicacy.👑 ');
-    this.router.navigateByUrl('/admin/menu')
+  onSubmit({ name, description, ingredients, allergens, price }: 
+    { name: string, description: string, ingredients: string, allergens: string, price: number }): void {
+    this.adminService.createMenu(name, description, ingredients, allergens, price)
+      .subscribe(() => {
+        this.router.navigateByUrl('/menu');
+      });
+    console.log('Creating a new delicacy.👑');
+    this.router.navigateByUrl('/admin/menu');
   }
+  
 
 }
 
