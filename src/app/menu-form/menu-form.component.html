@@ -19,5 +19,11 @@
         <label for="price">Price:</label>
         <input type="number" id="price" name="price" [(ngModel)]="price" required>
     </div>
+    <div class="form-group">
+        <label for="picture">Picture Relative Path:</label>
+        <input type="text" id="picture" name="picture" [(ngModel)]="imgRelPath" required>
+    </div>
+
+
     <button type="submit">{{buttonText}}</button>
 </form>

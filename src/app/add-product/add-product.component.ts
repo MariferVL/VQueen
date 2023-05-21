@@ -9,7 +9,7 @@ import { AdminService } from '../admin.service';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent {
- 
+
   constructor(
     private router: Router,
     private titleService: Title,
@@ -20,16 +20,15 @@ export class AddProductComponent {
     this.titleService.setTitle('VQAdmin - Add Product');
   }
 
-  onSubmit({ name, description, ingredients, allergens, price }: 
-    { name: string, description: string, ingredients: string, allergens: string, price: number }): void {
-    this.adminService.createMenu(name, description, ingredients, allergens, price)
+  onSubmit({ name, imgRelPath, description, ingredients, allergens, price }:
+    { name: string, imgRelPath: string, description: string, ingredients: string, allergens: string, price: number }): void {
+    this.adminService.createMenu(name, imgRelPath, description, ingredients, allergens, price)
       .subscribe(() => {
-        this.router.navigateByUrl('/menu');
+        this.router.navigateByUrl('/admin/menu');
+        console.log('Creating a new delicacy.👑');
       });
-    console.log('Creating a new delicacy.👑');
-    this.router.navigateByUrl('/admin/menu');
   }
-  
+
 
 }
 

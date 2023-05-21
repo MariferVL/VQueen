@@ -17,6 +17,7 @@ export class MenuFormComponent implements OnInit {
 
   id: string = '';
   name: string = '';
+  imgRelPath: string = '';
   description: string = '';
   price: number = 0;
   ingredients: string = '';
@@ -38,6 +39,7 @@ export class MenuFormComponent implements OnInit {
     this.onSubmit.emit({
       idmenu: this.generateUniqueId(),
       name: this.name,
+      imgRelPath: this.imgRelPath,
       description: this.description,
       ingredients: this.ingredients,
       allergens: this.allergens,

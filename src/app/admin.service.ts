@@ -42,9 +42,17 @@ export class AdminService {
     return this.http.delete(`/api/menu/${id}`)
   }
 
-  createMenu(name: string, description: string,ingredients: string,allergens: string,price: number): Observable<Menu> {
+  createMenu(name: string, imgRelPath:string, description: string,ingredients: string,allergens: string,price: number): Observable<Menu> {
     return this.http.post<Menu>(
       '/api/menu',
+      {name, imgRelPath, description,ingredients,allergens,price},
+      httpOptions,
+    );
+  }
+
+  editMenu(id: string, name: string, imgRelPath: string, description: string,ingredients: string,allergens: string,price: number): Observable<Menu> {
+    return this.http.post<Menu>(
+      `/api/menu/${id}`,
       {name, description,ingredients,allergens,price},
       httpOptions,
     );
