@@ -34,5 +34,20 @@ export class AdminService {
       );
   }
 
+  getOrdersForEmployees(): Observable<Menu[]> {
+    return this.http.get<Menu[]> ('/api/employees/12345/orders')
+  }
+
+  deleteMenu(id: string): Observable<any> {
+    return this.http.delete(`/api/menu/${id}`)
+  }
+
+  createMenu(name: string, description: string,ingredients: string,allergens: string,price: number): Observable<Menu> {
+    return this.http.post<Menu>(
+      '/api/menu',
+      {name, description,ingredients,allergens,price},
+      httpOptions,
+    );
+  }
 
 }
