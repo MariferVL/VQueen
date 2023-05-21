@@ -4,8 +4,8 @@
     buttonText="Save Changes"
     [currentName]="menu.name"
     [currentDescription]="menu.description"
-    [currentIngredientsStr]="menu.ingredients.join(', ')"
-    [currentAllergensStr]="menu.allergens.join(', ')"
+    [currentIngredients]="menu.ingredients"
+    [currentAllergens]="menu.allergens"
     [currentPrice]="menu.price"
 
     (onSubmit)="onSubmit()"

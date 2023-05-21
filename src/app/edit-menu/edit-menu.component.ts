@@ -14,8 +14,8 @@ export class EditMenuComponent {
     idmenu: '',
     name: '',
     description: '',
-    ingredients: [],
-    allergens: [],
+    ingredients: '',
+    allergens: '',
     price: 0,
     sales: 0
   };

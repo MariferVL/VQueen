@@ -11,20 +11,16 @@ export class MenuFormComponent implements OnInit {
   @Input() buttonText: any;
   @Input() currentName = '';
   @Input() currentDescription = '';
-  @Input() currentIngredients: string[] = [];
-  @Input() currentAllergens: string[] = [];
-  @Input() currentIngredientsStr = this.currentIngredients.join(', ');
-  @Input() currentAllergensStr = this.currentAllergens.join(', ');
+  @Input() currentIngredients= '';
+  @Input() currentAllergens= '';
   @Input() currentPrice = 0;
 
   id: string = '';
   name: string = '';
   description: string = '';
-  ingredients: string[] = [];
-  allergens: string[] = [];
   price: number = 0;
-  ingredientsString: string = '';
-  allergensString: string = '';
+  ingredients: string = '';
+  allergens: string = '';
 
   @Output() onSubmit = new EventEmitter<Menu>();
 
@@ -33,8 +29,8 @@ export class MenuFormComponent implements OnInit {
   ngOnInit(): void {
     this.name = this.currentName;
     this.description = this.currentDescription;
-    this.ingredientsString = this.currentIngredientsStr;
-    this.allergensString =this.currentAllergensStr;
+    this.ingredients = this.currentIngredients;
+    this.allergens =this.currentAllergens;
     this.price = this.currentPrice;
   }
 
@@ -43,8 +39,8 @@ export class MenuFormComponent implements OnInit {
       idmenu: this.generateUniqueId(),
       name: this.name,
       description: this.description,
-      ingredients: this.ingredientsString.split(','),
-      allergens: this.allergensString.split(','),
+      ingredients: this.ingredients,
+      allergens: this.allergens,
       price: Number(this.price),
       sales: 0,
     });
