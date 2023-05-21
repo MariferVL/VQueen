@@ -1,13 +1,16 @@
-<section class="content-box">
-    <h2>Edit Products</h2>
-    <app-menu-form 
-    buttonText="Save Changes"
-    [currentName]="menu.name"
-    [currentDescription]="menu.description"
-    [currentIngredients]="menu.ingredients"
-    [currentAllergens]="menu.allergens"
-    [currentPrice]="menu.price"
-
-    (onSubmit)="onSubmit()"
-    ></app-menu-form>
+<section class="content-box" *ngIf="menu">
+    <h2>Edit Menu</h2>
+    <app-menu-form buttonText="Save Changes" 
+        [currentName]="menu.name" 
+        [currentImg]="menu.imgRelPath" 
+        [currentDescription]="menu.description"
+        [currentIngredients]="menu.ingredients" 
+        [currentAllergens]="menu.allergens" 
+        [currentPrice]="menu.price"
+        (onSubmit)="onSubmit($event)"></app-menu-form>
 </section>
+
+<figure *ngIf="!menu">
+    <img src="" alt="Loading">
+    <figcaption>Loading...</figcaption>
+</figure>

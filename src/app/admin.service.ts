@@ -53,7 +53,7 @@ export class AdminService {
   editMenu(id: string, name: string, imgRelPath: string, description: string,ingredients: string,allergens: string,price: number): Observable<Menu> {
     return this.http.post<Menu>(
       `/api/menu/${id}`,
-      {name, description,ingredients,allergens,price},
+      {name, imgRelPath, description,ingredients,allergens,price},
       httpOptions,
     );
   }
