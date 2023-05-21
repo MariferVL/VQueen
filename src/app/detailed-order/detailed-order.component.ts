@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Menu } from '../types';
-import { fakeMenu } from '../fake-data';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Title } from '@angular/platform-browser';
 import { UsernameModalComponent } from '../username-modal/username-modal.component';
 import { OrderModalComponent } from '../order-modal/order-modal.component';
-import { Title } from '@angular/platform-browser';
+import { Menu } from '../types';
+import { AdminService } from '../admin.service';
 
 
 @Component({
@@ -28,12 +28,16 @@ export class DetailedOrderComponent implements OnInit {
     private router: Router,
     public dialog: MatDialog,
     private titleService: Title,
+    private adminService: AdminService,
   ) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('VQ - Add Product');
-    const id = this.route.snapshot.paramMap.get('id');
-    this.menu = fakeMenu.find(menu => menu.idmenu === id);    
+    const id = this.route.snapshot.paramMap.get('id') as string;
+    this.adminService.getMenusById(id)
+    .subscribe(menu => {
+      this.menu = menu;
+    })
     this.checkCustomerName();
   }
 

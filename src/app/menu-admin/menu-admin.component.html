@@ -7,9 +7,9 @@
   <h3>{{ menu.name }}</h3>
   <p>{{ menu.description }}</p>
   <ul>
-    <li *ngFor="let ingredient of menu.ingredients">{{ ingredient }}</li>
+    <li>Ingredients: {{ menu.ingredients }}</li>
+    <li>Allergens: {{ menu.allergens }}</li>
   </ul>
-  <p>Allergens: {{ menu.allergens.join(', ') }}</p>
   <p>Price: £{{ menu.price }}</p>
   <div class="buttons-container">
     <a routerLink="/admin/menu/edit/{{menu.idmenu}}">Edit</a>

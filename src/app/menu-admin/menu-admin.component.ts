@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { fakeMenu } from '../fake-data';
-import { Menu } from '../types';
 import { Title } from '@angular/platform-browser';
+import { AdminService } from '../admin.service';
+import { Menu } from '../types';
 
 @Component({
   selector: 'app-menu-admin',
@@ -12,15 +12,22 @@ export class MenuAdminComponent {
   menus: Menu [] = [];
 
   constructor(
-    private titleService: Title
+    private titleService: Title,
+    private adminService: AdminService,
     ) {}
 
   ngOnInit() {
     this.titleService.setTitle('VQAdmin - Menu Data');
-    this.menus = fakeMenu;
+    this.adminService.getMenus()
+    .subscribe(menus => this.menus = menus)
   }
 
   onDeleteClicked(menuId: string): void {
-    alert(`Deleting your dish with id ${menuId}`)
+    this.adminService.deleteMenu(menuId)
+    .subscribe(() => {
+      this.menus = this.menus.filter(
+        menu => menu.idmenu !== menuId
+      )
+    })
   }
 }
