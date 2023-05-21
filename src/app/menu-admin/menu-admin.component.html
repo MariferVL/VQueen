@@ -11,7 +11,8 @@
 
 <div class="content-box" *ngFor="let menu of menus">
   <h3>{{ menu.name }}</h3>
-  <p>{{ menu.description }}</p>
+  <p>Picture: {{menu.imgRelPath}}</p>
+  <p>Description:{{ menu.description }}</p>
   <ul>
     <li>Ingredients: {{ menu.ingredients }}</li>
     <li>Allergens: {{ menu.allergens }}</li>

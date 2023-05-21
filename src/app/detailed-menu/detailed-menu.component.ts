@@ -11,8 +11,18 @@ import { Title } from '@angular/platform-browser';
 })
 export class DetailedMenuComponent implements OnInit {
   isLoading: boolean = true;
-  menu: Menu | undefined; // Declare menu as a single Menu object, not an array
-  foodImg: string = 'assets/Images/sopaipilla.png'; 
+  menu: Menu = {
+    idmenu: '',
+    name: '',
+    imgRelPath: '',
+    description: '',
+    ingredients: '',
+    allergens: '',
+    price: 0,
+    sales: 0
+  }; 
+  foodImg: string = 'assets/Images/';
+
 
   constructor(
     private route: ActivatedRoute,
@@ -27,6 +37,7 @@ export class DetailedMenuComponent implements OnInit {
     this.adminService.getMenusById(id)
     .subscribe(menu => {
       this.menu = menu;
+      this.foodImg += this.menu.imgRelPath;
       this.isLoading = false;
     });
   

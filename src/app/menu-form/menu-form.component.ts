@@ -10,6 +10,7 @@ import { Menu } from '../types';
 export class MenuFormComponent implements OnInit {
   @Input() buttonText: any;
   @Input() currentName = '';
+  @Input() currentImg = '';
   @Input() currentDescription = '';
   @Input() currentIngredients= '';
   @Input() currentAllergens= '';
@@ -29,6 +30,7 @@ export class MenuFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.name = this.currentName;
+    this.imgRelPath = this.currentImg;    
     this.description = this.currentDescription;
     this.ingredients = this.currentIngredients;
     this.allergens =this.currentAllergens;
