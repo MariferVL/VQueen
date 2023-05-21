@@ -9,25 +9,28 @@ import { Menu } from '../types';
   styleUrls: ['./menu-admin.component.css']
 })
 export class MenuAdminComponent {
-  menus: Menu [] = [];
+  isLoading: boolean = true;
+  menus: Menu[] = [];
 
   constructor(
     private titleService: Title,
     private adminService: AdminService,
-    ) {}
+  ) { }
 
   ngOnInit() {
     this.titleService.setTitle('VQAdmin - Menu Data');
     this.adminService.getMenus()
-    .subscribe(menus => this.menus = menus)
+      .subscribe(menus => this.menus = menus)
   }
 
   onDeleteClicked(menuId: string): void {
     this.adminService.deleteMenu(menuId)
-    .subscribe(() => {
-      this.menus = this.menus.filter(
-        menu => menu.idmenu !== menuId
-      )
-    })
+      .subscribe(() => {
+        this.menus = this.menus.filter(
+          menu => {
+            this.isLoading = false;
+            menu.idmenu !== menuId;
+          })
+      })
   }
 }

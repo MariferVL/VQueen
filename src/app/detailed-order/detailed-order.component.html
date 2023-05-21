@@ -2,7 +2,7 @@
     <h1>Order Details</h1>
 </header>
 <main>
-    <section>
+    <section *ngIf="!isLoading">
         <h2>Order Information</h2>
         <div>
             <label for="order-id">Order ID:</label>
@@ -49,6 +49,11 @@
             </tfoot>
         </table>
     </section>
+
+    <figure *ngIf="isLoading">
+        <img src="" alt="Loading">
+        <figcaption>Loading...</figcaption>
+      </figure>
 
     <button (click)="confirmOrder()">Send Order</button>
 

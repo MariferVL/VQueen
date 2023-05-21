@@ -16,6 +16,7 @@ import { AdminService } from '../admin.service';
 
 
 export class DetailedOrderComponent implements OnInit {
+  isLoading: boolean = true;
   customerName: string = '';
   message: string = '';
   menu: Menu | undefined;
@@ -37,6 +38,7 @@ export class DetailedOrderComponent implements OnInit {
     this.adminService.getMenusById(id)
     .subscribe(menu => {
       this.menu = menu;
+      this.isLoading = false;
     })
     this.checkCustomerName();
   }

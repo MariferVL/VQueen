@@ -1,35 +1,34 @@
 <h1 class="heading">Zoom the Menu, Taste the Dream:<br>Flavor's Just a Click away,<br>it'll Make You Scream!</h1>
 
-<article *ngIf="menu"  >
-    <h3>{{menu.name}}</h3>
-    <p>This royal menu has been chosen {{menu.sales}} times</p>
-    <figure>
-      <img [src]="foodImg" alt="{{menu.name}}" class="foodImg">
-      <figcaption>Image:{{menu.name}}</figcaption>
-    </figure>
-    <p class="description">{{menu.description}}</p>
-    <section class="details">
-      <article>
-        <h5>Ingredients:</h5>
-        <p>{{menu.ingredients}}</p>
-      </article>
-      <article>
-        <h5>Allergens:</h5>
-        <p>{{menu.allergens}}</p>
-      </article>
-      <article>
-        <h5>Price:</h5>
-        <p>£{{menu.price}}</p>
-      </article>
-    </section>    
-    <footer>
-      <a routerLink="/order">Want It</a>
-       <a routerLink="/menu">Back</a>
-    </footer>
-  </article>
-
-  <figure *ngIf="isLoading">
-    <img src="" alt="Loading">
-    <figcaption>Loading...</figcaption>
+<article *ngIf="menu && !isLoading">
+  <h3>{{menu.name}}</h3>
+  <p>This royal menu has been chosen {{menu.sales}} times</p>
+  <figure>
+    <img [src]="foodImg" alt="{{menu.name}}" class="foodImg">
+    <figcaption>Image:{{menu.name}}</figcaption>
   </figure>
-  
+  <p class="description">{{menu.description}}</p>
+  <section class="details">
+    <article>
+      <h5>Ingredients:</h5>
+      <p>{{menu.ingredients}}</p>
+    </article>
+    <article>
+      <h5>Allergens:</h5>
+      <p>{{menu.allergens}}</p>
+    </article>
+    <article>
+      <h5>Price:</h5>
+      <p>£{{menu.price}}</p>
+    </article>
+  </section>
+  <footer>
+    <a routerLink="/order">Want It</a>
+    <a routerLink="/menu">Back</a>
+  </footer>
+</article>
+
+<figure *ngIf="isLoading">
+  <img src="" alt="Loading">
+  <figcaption>Loading...</figcaption>
+</figure>

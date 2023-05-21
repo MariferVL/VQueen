@@ -3,6 +3,12 @@
   <button>Add New Product</button>
 </a>
 <router-outlet></router-outlet>
+
+<figure *ngIf="isLoading">
+  <img src="" alt="Loading">
+  <figcaption>Loading...</figcaption>
+</figure>
+
 <div class="content-box" *ngFor="let menu of menus">
   <h3>{{ menu.name }}</h3>
   <p>{{ menu.description }}</p>

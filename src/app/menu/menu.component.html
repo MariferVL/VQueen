@@ -1,5 +1,11 @@
 <section  class="content-box">
     <h2>Our Menu</h2>
+
+    <figure *ngIf="isLoading">
+      <img src="" alt="Loading">
+      <figcaption>Loading...</figcaption>
+    </figure>
+
     <ul *ngFor="let menu of menus">
       <li id="{{menu.idmenu}}">
         <h4>{{menu.name}}</h4>
@@ -7,5 +13,5 @@
         <a routerLink="/menu/{{menu.idmenu}}">Zoom It</a>
       </li>
     </ul>
-  </section>
-  
+
+</section>
