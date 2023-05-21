@@ -8,11 +8,20 @@
       <figcaption>Image:{{menu.name}}</figcaption>
     </figure>
     <p class="description">{{menu.description}}</p>
-    <div class="details">
-      <p><strong>Price:</strong> £{{menu.price}}</p>
-      <p><strong>Ingredients:</strong>{{menu.ingredients}} </p>
-      <p><strong>Allergens:</strong> {{menu.allergens}}</p>
-    </div>
+    <section class="details">
+      <article>
+        <h5>Ingredients:</h5>
+        <p>{{menu.ingredients}}</p>
+      </article>
+      <article>
+        <h5>Allergens:</h5>
+        <p>{{menu.allergens}}</p>
+      </article>
+      <article>
+        <h5>Price:</h5>
+        <p>£{{menu.price}}</p>
+      </article>
+    </section>    
     <footer>
       <a routerLink="/order">Want It</a>
        <a routerLink="/menu">Back</a>

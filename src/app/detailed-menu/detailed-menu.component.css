@@ -1,31 +1,48 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .heading {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 1.5;
-  }
-  
-  .heading::before,
-  .heading::after {
-    content: "";
-    display: block;
-  }
-  
-  .heading::before {
-    margin-bottom: 1rem;
-  }
-  
-  .heading::after {
-    margin-top: 1rem;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-  .foodImg {
-    width: 33%;
-  }
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.heading::before,
+.heading::after {
+  content: "";
+  display: block;
+}
+
+.heading::before {
+  margin-bottom: 1rem;
+}
+
+.heading::after {
+  margin-top: 1rem;
+}
+
+.foodImg {
+  width: 33%;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 88rem;
+  grid-gap: 10px;
+}
+
+.article h5 {
+  margin: 0;
+  position: absolute;
+}
+
+.article p {
+  margin: 0;
+  position: relative;
+  margin-left: 8rem;
+}
