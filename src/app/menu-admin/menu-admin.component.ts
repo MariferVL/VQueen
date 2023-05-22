@@ -20,17 +20,16 @@ export class MenuAdminComponent {
   ngOnInit() {
     this.titleService.setTitle('VQAdmin - Menu Data');
     this.adminService.getMenus()
-      .subscribe(menus => this.menus = menus)
+      .subscribe(menus => {
+        this.menus = menus;
+        this.isLoading = false;
+      })
   }
 
   onDeleteClicked(menuId: string): void {
     this.adminService.deleteMenu(menuId)
       .subscribe(() => {
-        this.menus = this.menus.filter(
-          menu => {
-            this.isLoading = false;
-            menu.idmenu !== menuId;
-          })
+        this.menus = this.menus.filter( menu => menu.idmenu !== menuId)
       })
   }
 }
