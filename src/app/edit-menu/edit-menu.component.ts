@@ -37,8 +37,9 @@ export class EditMenuComponent implements OnInit {
 
       this.adminService.editMenu(this.menu.idmenu, name, imgRelPath, description, ingredients, allergens, price)
         .subscribe(() => {
-          console.log('Saving changes');
-          this.router.navigateByUrl('/admin/menu');
+          console.log('Saving changes');  
+          //TODO: PREGUNTA: Esto es apropiado? Porque funciona😅       
+          window.location.href = '/admin/menu';
         });
     }
   }
